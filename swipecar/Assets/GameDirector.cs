@@ -7,13 +7,13 @@ public class GameDirector : MonoBehaviour
 {
     GameObject car;
     GameObject flag;
-    GameObject distance;
+    GameObject Distance;
 
     void Start()
     {
         this.car = GameObject.Find("car");
         this.flag = GameObject.Find("flag");
-        this.distance = GameObject.Find("distance");
+        this.Distance = GameObject.Find("Distance");
     }
 
     // Update is called once per frame
@@ -21,7 +21,7 @@ public class GameDirector : MonoBehaviour
     {
         float length = this.flag.transform.position.x -
             this.car.transform.position.x;
-        this.distance.GetComponent<TextMeshProUGUI>().text =
+        this.Distance.GetComponent<TextMeshProUGUI>().text =
             "Distance:" + length.ToString("F2") + "m";
     }
 }
