@@ -22,6 +22,7 @@ public class CarController1 : MonoBehaviour
             Vector2 endPos = Input.mousePosition;
             float swipeLength = endPos.x - this.startPos.x;
             this.speed = swipeLength / 500.0f;
+            GetComponent<AudioSource>().Play();
         }
         transform.Translate(this.speed, 0, 0);
         this.speed *= 0.98f;
